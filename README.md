@@ -51,7 +51,7 @@ Request Body:
 {
   "username": "your_username",
   "password": "your_password"
-}`
+}
 ```
 Response: JWT token for authentication
 
