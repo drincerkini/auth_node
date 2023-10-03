@@ -39,7 +39,8 @@ Request Body:
 {
   "username": "your_username",
   "password": "your_password"
-}```
+}
+```
 Response: User registered successfully
 
 > User Login
@@ -50,7 +51,8 @@ Request Body:
 {
   "username": "your_username",
   "password": "your_password"
-}```
+}`
+```
 Response: JWT token for authentication
 
 Protected Route
