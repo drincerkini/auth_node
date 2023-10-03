@@ -10,7 +10,7 @@ This is a simple authentication API built with Node.js, Express.js, and MongoDB.
 ## Getting Started
 
 1. Clone the repository:
-git clone https://github.com/your-username/authentication-api.git
+git clone https://github.com/drincerkini/auth_node.git
 cd authentication-api
 
 2. Install dependencies:
@@ -32,23 +32,25 @@ The server will run at `http://localhost:3000`.
 
 ## API Endpoints
 
-* Register User
-Endpoint: `POST /register`
+> User Register
+* Endpoint: `POST /register`
 Request Body:
+```json
 {
   "username": "your_username",
   "password": "your_password"
-}
-* Response: User registered successfully
+}```
+Response: User registered successfully
 
-* User Login
+> User Login
 
-Endpoint: `POST /login`
+* Endpoint: `POST /login`
 Request Body:
+```json
 {
   "username": "your_username",
   "password": "your_password"
-}
+}```
 Response: JWT token for authentication
 
 Protected Route
