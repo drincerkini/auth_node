@@ -4,14 +4,16 @@ const { body } = require('express-validator');
 
 const router = express.Router();
 
-router.post('/register', [
-    body('username').isLength({ min: 5 }).withMessage('Username must be at least 5 characters long!'),
-    body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long!')
-], authController.registerUser);
+//validation middleware
+const validateRegister = [
+    body('username').isLength({ min: 5 }).withMessage('Username must be at least 5 characters long'),
+    body('password').isLength({ min: 8 }).withMessage('Password must be at least 8 characters long')
+];
 
-router.post('/login', [
-    body('username').isLength({ min: 5 }).withMessage('Username must be at least 5 characters long!'),
-    body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long!')
-], authController.loginUser);
+//api route for register
+router.post('/register', validateRegister, authController.registerUser);
+
+//api route for login
+router.post('/login', validateRegister, authController.loginUser);
 
 module.exports = router;
